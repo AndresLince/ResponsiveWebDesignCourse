@@ -6,28 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        @media screen {
+        @media screen and (max-width:480px) {
             body{
-                color: blue;
-                font-size: 18px;
+                background: #ddd;
+            }
+            .tablet,.escritorio {
+                display: none;
             }
         }
-
-        @media print {
+        @media screen and (min-width:481px) and (max-width:700px) {
             body{
-                color: yellow;
-                font-size: 30px;
+                background: red;
+            }
+            .movil,.escritorio {
+                display: none;
             }
         }
-
-        @media print, screen {
+        @media screen and (min-width:701px) {
             body{
-                font-family: Impact, Arial, Serif;
+                background: yellow;
+            }
+            .movil,.tablet {
+                display: none;
+            }
+        }
+        @media screen and (max-height:600px) {
+            body{
+                background: orange;
+                color: green;
+            }
+        }
+        @media screen and (orientation:portrait) {
+            h1{
+               border: 4px solid red;
+            }
+        }
+        @media screen and (orientation:landscape) {
+            h1{
+               border: 4px solid blue;
             }
         }
     </style>
 </head>
 <body>
+    <h1 class="movil">Movil</h1>
+    <h1 class="tablet">Tablet</h1>
+    <h1 class="escritorio">Escritorio</h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat voluptates repudiandae ducimus rem velit maxime. Voluptate modi ipsa nesciunt, ducimus dignissimos autem maxime magnam dolorem natus eaque labore ipsam cum?</p>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat voluptates repudiandae ducimus rem velit maxime. Voluptate modi ipsa nesciunt, ducimus dignissimos autem maxime magnam dolorem natus eaque labore ipsam cum?</p>
 </body>
