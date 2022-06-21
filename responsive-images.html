@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+        }
+        .contenedor {
+            width: 80%;
+            background: gray;
+            margin: 0 auto;
+        }
+        .imagen-responsive {
+            max-width: 100%;
+            display: block;
+            margin: 0 auto;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <img data-src="<480:images/mini.jpg, <800:images/mediano.jpg, >801:images/grande.jpg">
+    <div class="contenedor">
+        <h1>Imagen responsive</h1>
+
+    </div>
+    <script src='js/responsive-img.min.js'></script>
+</body>
+</html>
