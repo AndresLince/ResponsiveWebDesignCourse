@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @media screen and (max-width: 480px) {
+            .imagen-principal {
+                background: url("./images/mini.jpg") no-repeat center/ cover;
+                padding-top: 90.28%;
+            }
+        }
+        @media screen and (max-width: 480px) and (-webkit-min-device-pixel-ratio:2) {
+            .imagen-principal {
+                background: url("./images/image.jpg") no-repeat center/ cover;
+                padding-top: 90.28%;
+            }
+        }
+        @media screen and (min-width: 481px) and (max-width: 800px) {
+            .imagen-principal {
+                background: url("./images/mediano.jpg") no-repeat center/ cover;
+                padding-top: 90.28%;
+            }
+        }
+        @media screen and (min-width: 801px) {
+            .imagen-principal {
+                background: url("./images/grande.jpg") no-repeat center/ cover;
+                padding-top: 90.28%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="imagen-principal"></div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas numquam nam voluptates, molestiae est labore at cumque, dolorum libero vel nulla facere suscipit quisquam inventore. Minima sit aspernatur non provident?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas numquam nam voluptates, molestiae est labore at cumque, dolorum libero vel nulla facere suscipit quisquam inventore. Minima sit aspernatur non provident?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas numquam nam voluptates, molestiae est labore at cumque, dolorum libero vel nulla facere suscipit quisquam inventore. Minima sit aspernatur non provident?</p>
+</body>
+</html>
