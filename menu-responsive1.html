@@ -15,7 +15,94 @@
             background: red;
             overflow: hidden;
             background: #dce2e5;
-            max-width: 1200px;
+            max-width: 75em;
+        }
+        /*
+            1em = 16px
+            X   = 1200px
+        */
+        header {
+            background: #ff5864;
+            overflow: hidden;
+            padding: 0.9375em;
+        }
+        .logo {
+            display: block;
+            float: left;
+            max-width: 12.5em;
+        }
+
+        .logo img {
+            max-width: 100%;
+        }
+
+        nav {
+            float: right;
+            margin-top: 2.1875em; /* 35px / 16px */
+        }
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        nav ul li {
+            float: left;
+        }
+
+        nav ul li a {
+            display: block;
+            color: #0f0f0f;
+            text-decoration: none;
+            font-size: 1.125em; /* 18px / 16*/
+            text-align: center;
+            padding: 0.875em 1.125em;
+        }
+
+        nav ul li a:hover {
+            background: #3d3c3e;
+            color: white;
+            border-radius: 0.375em;
+        }
+
+        /*Medias queries en los 910px*/
+        @media screen and (max-width: 56.875em) { /* 910 px / 16px  */
+            .logo {
+                float: none;
+                margin: 0 auto;
+            }
+            nav {
+                float: none;
+            }
+
+            nav li {
+                width: 20%;
+            }
+        }
+
+         /*Medias queries en los 620px*/
+         @media screen and (max-width: 38.75em) {/*620 px / 16px  */
+            body {
+                font-size: 85%;
+            }
+            .contenedor {
+                width: 100%;
+            }
+            nav li {
+                width: 50%;
+            }
+            nav ul li a {
+                background: #3d3c3e;
+                color: white;
+                border-radius: 0.375em; /* 6px / 16px*/
+                margin: 0.125em; /* 2px / 16px*/
+            }
+            nav ul li a:hover {
+                background: #1d1c1d;
+            }
+
+            nav ul li:last-child {
+                width: 100%;
+            }
         }
     </style>
 </head>
