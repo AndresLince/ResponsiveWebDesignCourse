@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-size: 100%;
+        }
+        .contenedor{
+            width: 90%;
+            margin: 0 auto;
+            background: red;
+            overflow: hidden;
+            background: #dce2e5;
+            max-width: 75em;
+        }
+        /*
+            1em = 16px
+            X   = 1200px
+        */
+        header {
+            background: #ff5864;
+            overflow: hidden;
+            padding: 0.9375em;
+        }
+        .logo {
+            display: block;
+            float: left;
+            max-width: 12.5em;
+        }
+
+        .logo img {
+            max-width: 100%;
+        }
+
+        nav {
+            float: right;
+            margin-top: 2.1875em; /* 35px / 16px */
+        }
+        #menumovil {
+            display: none;
+        }
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        nav ul li {
+            float: left;
+        }
+
+        nav ul li a {
+            display: block;
+            color: #0f0f0f;
+            text-decoration: none;
+            font-size: 1.125em; /* 18px / 16*/
+            text-align: center;
+            padding: 0.875em 1.125em;
+        }
+
+        nav ul li a:hover {
+            background: #3d3c3e;
+            color: white;
+            border-radius: 0.375em;
+        }
+
+        /*Medias queries en los 910px*/
+        @media screen and (max-width: 56.875em) { /* 910 px / 16px  */
+            .logo {
+                float: none;
+                margin: 0 auto;
+            }
+            nav {
+                float: none;
+            }
+
+            nav li {
+                width: 20%;
+            }
+        }
+
+         /*Medias queries en los 620px*/
+         @media screen and (max-width: 38.75em) {/*620 px / 16px  */
+            body {
+                font-size: 85%;
+                margin: 0;
+            }
+            .contenedor {
+                width: 100%;
+            }
+            header {
+                padding: 0;
+            }
+            nav ul {
+                display: none;
+                background: #222222;
+            }
+            nav ul li {
+                float: none;
+                width: auto;
+                border-top: 1px solid #696565;
+                border-bottom: 1px solid #1e1e1e;
+            }
+            nav ul li a {
+                background: #3d3c3e;
+                color: white;
+                border-radius: 0; /* 6px / 16px*/
+                margin: 0px; /* 2px / 16px*/
+                transition: all 0.5s ease;
+            }
+            nav ul li a:hover {
+                background: #1d1c1d;
+                border-radius: 0;
+            }
+
+            /* Estilos para el boton de tres lineas*/
+            #menumovil {
+                display: block;
+                background: #494646;
+                position: relative;
+                text-decoration: none;
+                text-align: center;
+                height: 3em; /* 48px / 16px  */
+                line-height: 3em; /* 48px / 16px  */
+                position: relative;
+                color: white
+            }
+            #menumovil:hover{
+                background: black;
+            }
+            #menumovil:before{
+                content: "";
+                position: absolute;
+                right: 0.75em; /* 12px / 16px*/
+                top: 0.75em; /* 12px / 16px*/
+                width: 1.875em; /* 30px / 16px*/
+                height: 0.25em; /* 4px / 16px*/
+                border-top: 4px solid white;
+                border-bottom: 12px double white;
+                transition: all 0.5s;
+            }
+            #menumovil:hover:before{
+                content: "";
+                border-top: 4px solid #ff5864;
+                border-bottom: 12px double #ff5864;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <header>
+            <a href="#" class="logo">
+                <img src="images/logo.png" alt="">
+            </a>
+            <nav>
+                <a href="#" id="menumovil">Menu</a>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Nosotros</a></li>
+                    <li><a href="#">Servicios</a></li>
+                    <li><a href="#">Proyectos</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis molestiae provident quam non delectus ex veritatis id eveniet unde corporis libero nostrum, perspiciatis nemo vero ipsum modi voluptate ipsam voluptates.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis molestiae provident quam non delectus ex veritatis id eveniet unde corporis libero nostrum, perspiciatis nemo vero ipsum modi voluptate ipsam voluptates.</p>
+    </div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/menuresponsive.js"></script>
+</body>
+</html>
